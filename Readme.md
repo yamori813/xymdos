@@ -8,6 +8,8 @@ This program dose not have error check and time out check.
 
 You must start send program first then use this program. 
 
+Also you need set baud rate and character bits by speed command.
+
 Thanks  
 
 Hiroki Mori 
