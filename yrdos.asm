@@ -125,6 +125,7 @@ L18:
 	LOOP	L14
 	MOV	BX,DX
 
+; add last num
 	XOR	DX,DX
 	MOV	DL,AL
 	SUB	DL,'0'
