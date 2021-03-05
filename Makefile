@@ -1,10 +1,19 @@
+#
+#
+#
+
+ASM=fasm
+
 all: xrdos.com yrdos.com
 
 xrdos.com: xrdos.asm
-	fasm xrdos.asm
+	$(ASM) xrdos.asm
 
 yrdos.com: yrdos.asm
-	fasm yrdos.asm
+	$(ASM) yrdos.asm
+
+zip:
+	zip xydos xrdos.com yrdos.com
 
 clean:
-	rm *.com
+	rm -rf *.com *.zip
