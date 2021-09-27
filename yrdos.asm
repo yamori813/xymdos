@@ -10,6 +10,19 @@ CAN	EQU	18H
 
 	ORG	100H
 
+; Flash In data
+L22:
+	MOV	AH,44H
+	MOV	AL,06H
+	MOV	BX,3
+	INT	21H
+	CMP	AL,0FFH
+	JNE	L8
+; dummy read
+	MOV	AH,03H
+	INT	21H
+	JP	L22
+
 ; YMODEM
 
 L8:
