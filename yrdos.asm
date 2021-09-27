@@ -1,4 +1,5 @@
 ; MS-DOS ymodem revice program
+; lsb start first then this program excute
 
 SOH	EQU	01H
 STX	EQU	02H

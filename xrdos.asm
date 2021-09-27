@@ -1,4 +1,5 @@
 ; MS-DOS xmodem revice program
+; lsx start first then this program excute
 
 SOH	EQU	01H
 STX	EQU	02H
