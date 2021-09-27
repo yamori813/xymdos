@@ -63,6 +63,9 @@ L3:
 	INT	21H
 
 ; write
+	MOV	DL,'*'
+	MOV	AH,02H
+	INT	21H
 	MOV	BX,[FHAND]
 	MOV	CX,128
 	MOV	DX,BUFF
