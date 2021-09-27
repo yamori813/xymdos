@@ -9,6 +9,19 @@ CAN	EQU	18H
 
 	ORG	100H
 
+; Flash In data
+L7:
+	MOV	AH,44H
+	MOV	AL,06H
+	MOV	BX,3
+	INT	21H
+	CMP	AL,0FFH
+	JNE	L6
+; dummy read
+	MOV	AH,03H
+	INT	21H
+	JP	L7
+L6:
 	MOV	BX,80H
 	XOR	CX,CX
 	ADD	CL,[BX]
